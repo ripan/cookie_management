@@ -111,6 +111,10 @@ img.cookie_logo{
 		background-color:#555;
 		font-weight:bold;
 	}
+	
+	.cookie-menu.active{
+		font-weight:bold;
+	}
 
 	.btn-accept {
 		background-color:#ea7d1c;

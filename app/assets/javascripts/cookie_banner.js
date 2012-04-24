@@ -116,7 +116,7 @@ function show_cookie_banner(options){
 	ck_bnr_body = document.createElement("div");
 	ck_bnr_body.className="cookie-banner-body";
 	ck_bnr_body.id="cookie-banner-body";
-	ck_bnr_body.style.display="none";
+	ck_bnr_body.style.display="block"; //change
 	
 	ck_bnr_body_message =  document.createElement("div");
 	ck_bnr_body_message.className="cookie-banner-body-message";
@@ -147,7 +147,7 @@ function show_cookie_banner(options){
 	
 	
 	
-	
+
 		
 	for(i=0; i < options.info.length; i++){
 		ck_title_child =  document.createElement("div");
@@ -191,7 +191,6 @@ function show_cookie_banner(options){
 			ck_info_child.appendChild(el_bold);
 			ck_info_child.appendChild(el);
 		}
-		
 	}
 	ck_bnr_body_right.appendChild(ck_info_parent);
 
@@ -225,58 +224,6 @@ function show_cookie_banner(options){
 		},false);
 		checkCookie();	
 	}
-	
-	
-	
-	
-	// 
-	// 
-	// 
-	// 
-	// el_div = document.createElement("div");
-	// el_div.className="cookie-banner";
-	// el_div.textContent = "This website works best using cookies which are currently blocked. Allow cookies?";
-	// 
-	// el_sp = document.createElement("p");
-	// el_div.appendChild(el_sp)
-	// 
-	// el_img_div = document.createElement("div");
-	// el_img_div.className="cookie-banner-logo";
-	// el_img = document.createElement("img");
-	// el_img.src=options.logo;
-	// el_img.height="40";
-	// el_img_div.appendChild(el_img);
-	// el_div.appendChild(el_img_div);
-	// 
-	// var el_input = document.createElement('input');
-	// el_input.id="chkAcceptCookie";
-	// el_input.type="checkbox";
-	// el_input.name="chkAcceptCookie";
-	// 
-	// var el_button = document.createElement('button');
-	// el_button.type="button";
-	// el_button.className="btn-accept";
-	// el_button.textContent="Continue";
-	// 	
-	// var el_p = document.createElement("span");
-	// el_p.appendChild(el_input);
-	// 
-	// var el_span = document.createElement("span");
-	// el_span.textContent = 'I accept cookies from this site.';
-	// el_p.appendChild(el_span);
-	// el_p.appendChild(el_button);
-	// 
-	// el_div.appendChild(el_p);
-	// 
-	// if(!document.body){
-		// 	alert('Please include the script at the end of <body> tag ');
-		// }else{
-			// 	document.body.appendChild(el_div);
-			// 	el_button.addEventListener('click',function (e) {
-				// 		checkCookie();
-				// 	},false);
-				// 
-				// 	checkCookie();	
-				// }
-			}
+
+}
 
