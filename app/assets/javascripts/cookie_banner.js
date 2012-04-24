@@ -76,7 +76,7 @@ function show_cookie_banner(options){
 	ck_bnr_head_link.className="cookie-banner-head-link";
 	
 	
-	ck_bnr_head_cnt_1 =  document.createElement("span");
+	ck_bnr_head_cnt_1 =  document.createElement("div");
 	ck_bnr_head_cnt_1.textContent = options.banner_head_text;
 	
 	el_more_link =  document.createElement("a");
@@ -84,10 +84,7 @@ function show_cookie_banner(options){
 	el_more_link.href="#"
 	el_more_link.className="hide"
 	
-	
-
-	
-	ck_bnr_head_cnt_2 =  document.createElement("span");
+	ck_bnr_head_cnt_2 =  document.createElement("div");
 	el_input = document.createElement('input');
 	el_input.id="chkAcceptCookie";
 	el_input.type="checkbox";
@@ -106,7 +103,7 @@ function show_cookie_banner(options){
 	ck_bnr_head_cnt_2.appendChild(el_button);
 
 	ck_bnr_head_cnt.appendChild(ck_bnr_head_cnt_1);
-	ck_bnr_head_cnt.appendChild(document.createElement('br'));
+	// ck_bnr_head_cnt.appendChild(document.createElement('br'));
 	ck_bnr_head_cnt.appendChild(ck_bnr_head_cnt_2);
 
 	
