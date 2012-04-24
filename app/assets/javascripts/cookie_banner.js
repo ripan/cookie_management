@@ -78,12 +78,7 @@ function show_cookie_banner(options){
 	
 	ck_bnr_head_cnt_1 =  document.createElement("div");
 	ck_bnr_head_cnt_1.textContent = options && options.banner_head_text || '';
-	
-	el_more_link =  document.createElement("a");
-	el_more_link.textContent = 'More';
-	el_more_link.href="#"
-	el_more_link.className="hide"
-	
+
 	ck_bnr_head_cnt_2 =  document.createElement("div");
 	el_input = document.createElement('input');
 	el_input.id="chkAcceptCookie";
@@ -186,8 +181,25 @@ function show_cookie_banner(options){
 			ck_desc_child.appendChild(el);
 		}
 	}
+
+	// create readmore link
+	el_link_pretext =  document.createElement("span");
+	el_link_pretext.textContent = options && options.link_pretext || '';
 	
-	ck_bnr_head_link.appendChild(el_more_link);
+	el_link_posttext =  document.createElement("span");
+	el_link_posttext.textContent = options && options.link_posttext || '';
+	
+	el_more_link =  document.createElement("a");
+	el_more_link.textContent = options && options.link_text || '';
+	el_more_link.href="#"
+	el_more_link.className="hide"
+		
+	link_text =  document.createElement("div");
+	link_text.appendChild(el_link_pretext);
+	link_text.appendChild(el_more_link);
+	link_text.appendChild(el_link_posttext);
+	
+	ck_bnr_head_link.appendChild(link_text);
 	
 	ck_bnr_body_left.appendChild(ck_title_parent);
 	ck_bnr_body_right.appendChild(ck_desc_parent);

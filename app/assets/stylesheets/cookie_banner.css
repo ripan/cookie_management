@@ -4,17 +4,15 @@
 	left: 0px;
 	top: 0px;
 	z-index:1;
-	background-color:#37444d;
 	color:white;
 	font-family: Arial;
 }
 
 .cookie-banner-head{
-	min-height:50px;
 	background-color:#37444d;
-	color:white;
-	font-size:14px;
 	padding:10px;
+	overflow:auto;
+	font-size:13px;
 }
 
 .cookie-banner-head-content{
@@ -24,37 +22,39 @@
 
 div.cookie-banner-head-content div{
 	padding:3px;
-	font-size:13px;
+}
+
+div.cookie-banner-head-content span{
+	padding:0px 10px 0px 5px;
 }
 
 .cookie-banner-head-logo{
 	float:right;
 	width: 30%; 
 }
-.cookie-banner-head-link{
+
+div.cookie-banner-head-link div{
+	color:#ea7d1c;
+	font-family: Arial;
+	font-size:12px;
 	float:right;
-	padding-bottom:2px;
-	width: 100%; 
+}
+
+div.cookie-banner-head-link p{
+	color:#ea7d1c;
+	font-family: Arial;
+	font-size:12px;
+	float:right;
 }
 
 div.cookie-banner-head-link a{
-	color:#ea7d1c;
-	font-family: Arial;
-	font-size:11px;
-	float:right;
+	color:white;
+	padding:0px 5px 0px 5px;
 }
-
 
 #cookie-desc{
 	min-height:50px;
-
 	margin: 10px;
-	font-size:13px;
-	font-family: Arial;
-}
-
-#cookie-title{
-	font-size:13px;
 	font-family: Arial;
 }
 
@@ -63,34 +63,25 @@ img.cookie_logo{
 }
 
 .cookie-banner-body{
-	min-height:100px;
 	background-color:#999;
-	color:white;
-	font-size:14px;
-	overflow:auto;
 	padding:10px;
+	min-height:100px;
+	font-size:13px;
+	overflow:auto;
 }
 
 .cookie-banner-body-message{
-	width:100%;
-	color:white;
-	font-size:13px;
-	float:left;
 	padding-bottom:10px;
 }
 
 .cookie-banner-body-left{
-	color:white;
-	font-size:14px;
 	width: 20%; 
 	float:left;
 }
 
-
 .cookie-banner-body-right{
 	background-color:#f7f7f7;
 	color:black;
-	font-size:14px;
 	width: 80%; 
 	float:right;
 	border-radius:10px;
@@ -99,7 +90,7 @@ img.cookie_logo{
 .cookie-menu{
 	border-radius:5px;
 	color:#ea7d1c;
-	margin: 5px;
+	margin: 3px;
 	padding-left: 10px;
 	padding-top: 2px;
 	cursor: pointer;
@@ -129,7 +120,7 @@ img.cookie_logo{
 		border:1px solid #e14a21;
 		display:inline-block;
 		color:white;
-	  font-family: Arial;
+		font-family: Arial;
 		font-size:15px;
 		font-weight:bold;
 		padding:2px 4px;
