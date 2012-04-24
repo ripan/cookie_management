@@ -116,7 +116,7 @@ function show_cookie_banner(options){
 	ck_bnr_body = document.createElement("div");
 	ck_bnr_body.className="cookie-banner-body";
 	ck_bnr_body.id="cookie-banner-body";
-	ck_bnr_body.style.display="block"; //change
+	ck_bnr_body.style.display="none"; //change
 	
 	ck_bnr_body_message =  document.createElement("div");
 	ck_bnr_body_message.className="cookie-banner-body-message";
@@ -145,10 +145,15 @@ function show_cookie_banner(options){
 		ck_title_child.id='cookie-title-'+i
 		ck_title_child.className='cookie-menu';
 		ck_title_child.addEventListener('click',function (e) {
-			children = document.getElementById('cookie-desc').children
-			for(j=0;j<children.length;j++){
-				children[j].style.display='none';
+			desc_children = document.getElementById('cookie-desc').children
+			for(j=0;j<desc_children.length;j++){
+				desc_children[j].style.display='none';
 			}
+			title_children = document.getElementById('cookie-title').children
+			for(j=0;j<title_children.length;j++){
+				title_children[j].className='cookie-menu';
+			}
+			this.className='cookie-menu active';
 			document.getElementById('cookie-desc-'+this.id.split('-').pop()).style.display='block';
 		},false);
 		ck_title_parent.appendChild(ck_title_child);
@@ -159,10 +164,12 @@ function show_cookie_banner(options){
 		ck_desc_child.textContent=cookie_info_array[i].description
 		ck_desc_child.id='cookie-desc-'+i
 		
-		if(i==0)
-		ck_desc_child.style.display="block"
+		// setting first cookie title as default and show its description
+		if(i==0){
+			ck_desc_child.style.display="block"
+			ck_title_child.className='cookie-menu active';}
 		else
-		ck_desc_child.style.display="none"
+			ck_desc_child.style.display="none"
 		
 		ck_desc_parent.appendChild(ck_desc_child);
 		ck_desc_child.appendChild(document.createElement('br'));
@@ -180,30 +187,18 @@ function show_cookie_banner(options){
 		}
 	}
 	
-	
-	ck_bnr_body_left.appendChild(ck_title_parent);
-	
-	
-
-	
-	
-	ck_bnr_body_right.appendChild(ck_desc_parent);
-
 	ck_bnr_head_link.appendChild(el_more_link);
 	
-	
+	ck_bnr_body_left.appendChild(ck_title_parent);
+	ck_bnr_body_right.appendChild(ck_desc_parent);
+
 	ck_bnr_head.appendChild(ck_bnr_head_cnt);
 	ck_bnr_head.appendChild(ck_bnr_head_logo);
 	ck_bnr_head.appendChild(ck_bnr_head_link);
 	
-	
-	
-		
 	ck_bnr_body.appendChild(ck_bnr_body_message);
 	ck_bnr_body.appendChild(ck_bnr_body_left);
 	ck_bnr_body.appendChild(ck_bnr_body_right);
-		
-	
 	
 	ck_bnr.appendChild(ck_bnr_head);
 	ck_bnr.appendChild(ck_bnr_body);
