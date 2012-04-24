@@ -135,11 +135,13 @@ function show_cookie_banner(options){
 	ck_desc_parent =  document.createElement("div");
 	ck_desc_parent.id="cookie-desc";
 	
-	for(i=0; i < options.info.length; i++){
+	cookie_info_array = options.info || [] 
+	
+	for(i=0; i < cookie_info_array.length; i++){
 		
 		//create title
 		ck_title_child =  document.createElement("div");
-		ck_title_child.textContent=options.info[i].title
+		ck_title_child.textContent=cookie_info_array[i].title
 		ck_title_child.id='cookie-title-'+i
 		ck_title_child.className='cookie-menu';
 		ck_title_child.addEventListener('click',function (e) {
@@ -154,7 +156,7 @@ function show_cookie_banner(options){
 
         //create description
 		ck_desc_child =  document.createElement("div");
-		ck_desc_child.textContent=options.info[i].description
+		ck_desc_child.textContent=cookie_info_array[i].description
 		ck_desc_child.id='cookie-desc-'+i
 		
 		if(i==0)
@@ -166,7 +168,7 @@ function show_cookie_banner(options){
 		ck_desc_child.appendChild(document.createElement('br'));
 		
 		//create cookies key value pair
-		cookies = options.info[i].cookies;
+		cookies = cookie_info_array[i].cookies;
 		for (var k in cookies) {
 			ck_desc_child.appendChild(document.createElement('br'));
 			el =  document.createElement("span");
