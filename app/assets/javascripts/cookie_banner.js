@@ -95,7 +95,7 @@ function show_cookie_banner(options){
 	
 	el_button = document.createElement('button');
 	el_button.type="button";
-	el_button.className="btn-green";
+	el_button.className="btn-accept";
 	el_button.textContent="Continue";
 	
 	ck_bnr_head_cnt_2.appendChild(el_input);
@@ -255,7 +255,7 @@ function show_cookie_banner(options){
 	// 
 	// var el_button = document.createElement('button');
 	// el_button.type="button";
-	// el_button.className="btn-green";
+	// el_button.className="btn-accept";
 	// el_button.textContent="Continue";
 	// 	
 	// var el_p = document.createElement("span");
