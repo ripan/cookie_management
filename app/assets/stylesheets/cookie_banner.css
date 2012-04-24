@@ -1,0 +1,147 @@
+/*.cookie-banner-logo{
+padding-top: 10px;
+padding-right: 10px;
+float:right;
+position: absolute;
+top: 0px;
+right: 0px;
+}*/
+	
+.cookie-banner{
+width: 100%; 
+position: absolute;
+left: 0px;
+top: 0px;
+z-index:1;
+/*min-height:200px;*/
+background-color:#37444d;
+color:white;
+font-family: Arial;
+}
+
+.cookie-banner-head{
+min-height:50px;
+background-color:#37444d;
+color:white;
+font-size:14px;
+padding:10px;
+}
+
+.cookie-banner-head-content{
+float:left;
+width: 70%; 
+/*min-height:50px;*/
+/*background-color:blue;*/
+}
+.cookie-banner-head-logo{
+float:right;
+width: 30%; 
+/*min-height:50px;*/
+/*background-color:yellow;*/
+}
+.cookie-banner-head-link{
+float:right;
+
+/*min-height:50px;*/
+/*background-color:yellow;*/
+}
+
+
+#cookie-info{
+background-color:white;
+margin: 10px;
+font-size:13px;
+font-family: Arial;
+/*min-height:100px;*/
+}
+
+#cookie-title{
+/*background-color:red;*/
+font-size:13px;
+font-family: Arial;
+}
+
+
+/*.cookie-banner-head-text{
+
+font-family: Arial;
+}*/
+
+
+
+img.cookie_logo{
+float:right;
+}
+
+.cookie-banner-body{
+min-height:100px;
+background-color:#999;
+color:white;
+font-size:14px;
+overflow:auto;
+padding:10px;
+}
+
+.cookie-banner-body-message{
+color:white;
+font-size:13px;
+float:left;
+padding:10px;
+}
+
+.cookie-banner-body-left{
+/*min-height:150px;*/
+/*background-color:#666;*/
+color:white;
+font-size:14px;
+width: 20%; 
+float:left;
+}
+
+
+.cookie-banner-body-right{
+/*min-height:150px;*/
+background-color:white;
+color:black;
+font-size:14px;
+width: 80%; 
+float:right;
+border-radius:10px;
+}
+
+.cookie-menu{
+background-color:black;
+/*min-height:20px;*/
+border-radius:10px;
+margin: 5px;
+padding-left: 10px;
+padding-top: 2px;
+cursor: pointer;
+background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #222), color-stop(1, #555) );
+background:-moz-linear-gradient( center top, #222 5%, #555 100% );
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#222', endColorstr='#555');
+background-color:#222;
+
+}.cookie-menu:hover {
+background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #333), color-stop(1, #999) );
+background:-moz-linear-gradient( center top, #333 5%, #999 100% );
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#333', endColorstr='#999');
+background-color:#333;
+}
+
+.btn-green {
+background-color:#77d42a;
+border-radius:6px;
+border:1px solid #268a16;
+display:inline-block;
+color:#306108;
+font-family:arial;
+font-size:15px;
+font-weight:bold;
+padding:2px 4px;
+}.btn-green:hover {
+background-color:#A9FF5C;
+}.btn-green:active {
+position:relative;
+top:1px;
+}
