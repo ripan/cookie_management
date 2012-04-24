@@ -77,7 +77,7 @@ function show_cookie_banner(options){
 	
 	
 	ck_bnr_head_cnt_1 =  document.createElement("div");
-	ck_bnr_head_cnt_1.textContent = options.banner_head_text || '';
+	ck_bnr_head_cnt_1.textContent = options && options.banner_head_text || '';
 	
 	el_more_link =  document.createElement("a");
 	el_more_link.textContent = 'More';
@@ -91,7 +91,7 @@ function show_cookie_banner(options){
 	el_input.name="chkAcceptCookie";
 	
 	el_span = document.createElement("span");
-	el_span.textContent = options.banner_message || '';
+	el_span.textContent = options && options.banner_message || '';
 	
 	el_button = document.createElement('button');
 	el_button.type="button";
@@ -108,7 +108,7 @@ function show_cookie_banner(options){
 
 	
 	el_img = document.createElement("img");
-	el_img.src=options.logo;
+	el_img.src=options && options.logo || '';
 	el_img.height="40";
 	el_img.className = 'cookie_logo';
 	ck_bnr_head_logo.appendChild(el_img);
@@ -120,7 +120,7 @@ function show_cookie_banner(options){
 	
 	ck_bnr_body_message =  document.createElement("div");
 	ck_bnr_body_message.className="cookie-banner-body-message";
-	ck_bnr_body_message.textContent=options.banner_body_text || '';
+	ck_bnr_body_message.textContent=options && options.banner_body_text || '';
 	
 	ck_bnr_body_left =  document.createElement("div");
 	ck_bnr_body_left.className="cookie-banner-body-left";
@@ -135,7 +135,7 @@ function show_cookie_banner(options){
 	ck_desc_parent =  document.createElement("div");
 	ck_desc_parent.id="cookie-desc";
 	
-	cookie_info_array = options.info || [] 
+	cookie_info_array = options && options.info || [] 
 	
 	for(i=0; i < cookie_info_array.length; i++){
 		
