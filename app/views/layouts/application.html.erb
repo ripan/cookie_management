@@ -12,7 +12,9 @@
 
 
 <script>
-show_cookie_banner({
+
+var cookie_banner = new CookieBanner();
+cookie_banner.create({
 	//logo: 'http://www.aemedia.com/img/footer-logo.png',
   logo: '/assets/posterscope.jpg',
   banner_head_text: 'Posterscope would like to use cookies to store information on your computer, this will improve your browser experience on this website. Indeed Cookies are essential for certain areas of the site to operate correctly and therefore, the initial entry has been set.',
@@ -42,6 +44,7 @@ show_cookie_banner({
       cookies: {'Cookies used': ['ASP.NET_SessionId']}},
         ]
 });
+cookie_banner.render();
 </script>
 
 </body>
