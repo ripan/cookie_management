@@ -179,22 +179,20 @@ function show_cookie_banner(options){
 			el_bold.textContent=k + ':  ';
 			ck_desc_child.appendChild(el_bold);
 			ck_desc_child.appendChild(el);
+			ck_desc_child.appendChild(document.createElement('br'));
 		}
 	}
 
 	// create readmore link
-	el_link_pretext =  document.createElement("span");
-	el_link_pretext.textContent = options && options.link_pretext || '';
-	
-	el_link_posttext =  document.createElement("span");
-	el_link_posttext.textContent = options && options.link_posttext || '';
+	el_link_pretext =  document.createTextNode(options && options.link_pretext || '');	
+	el_link_posttext =   document.createTextNode(options && options.link_posttext || '');
 	
 	el_more_link =  document.createElement("a");
 	el_more_link.textContent = options && options.link_text || '';
 	el_more_link.href="#"
 	el_more_link.className="hide"
 		
-	link_text =  document.createElement("div");
+	link_text =  document.createElement("span");
 	link_text.appendChild(el_link_pretext);
 	link_text.appendChild(el_more_link);
 	link_text.appendChild(el_link_posttext);
