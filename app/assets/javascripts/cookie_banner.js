@@ -39,7 +39,7 @@ function checkCookie()
 {
 	var name = window.location.hostname;
 	var exp_days =10;
-	var el_banner = $('.cookie-banner');
+	var el_banner = document.getElementById('cookie-banner');
 	var el_chk_cookie = document.getElementById('chkAcceptCookie')
 	var cookie=getCookie(name);
 	
@@ -62,6 +62,7 @@ function show_cookie_banner(options){
 	
 	ck_bnr =  document.createElement("div");
 	ck_bnr.className="cookie-banner";
+	ck_bnr.id="cookie-banner";
 	
 	ck_bnr_head =  document.createElement("div");
 	ck_bnr_head.className="cookie-banner-head";
