@@ -1,7 +1,7 @@
 
 function CookieBanner() {
 	
-	var getCookie = function(c_name){
+	this.getCookie = function(c_name){
 		var i,x,y,ARRcookies=document.cookie.split(";");
 		for (i=0;i<ARRcookies.length;i++)
 		{
@@ -14,8 +14,8 @@ function CookieBanner() {
 			}
 		}
 	}
-	
-	var setCookie = function(c_name,value,exdays){
+		
+	this.setCookie = function(c_name,value,exdays){
 		var cookie_string = c_name + "=" + escape(value);
 		if (exdays)
 		{
@@ -27,17 +27,17 @@ function CookieBanner() {
 		document.cookie = cookie_string;
 	}
 	
-	var unsetCookie = function(c_name){
+	this.unsetCookie = function(c_name){
 		var c_value=escape('') +  "; expires="+ (new Date('1970')).toUTCString();
 		document.cookie=c_name + "=" + c_value;	
 	}
 	
-	var checkCookie = function(){
+	this.checkCookie = function(){
 		var name = window.location.hostname;
 		var exp_days =10;
 		var el_banner = document.getElementById('cookie-banner');
 		var el_chk_cookie = document.getElementById('chkAcceptCookie')
-		var cookie=getCookie(name);
+		var cookie=this.getCookie(name);
 		
 		if (cookie!=null && cookie!="")
 		{
@@ -46,7 +46,7 @@ function CookieBanner() {
 		else 
 		{
 			if(el_chk_cookie.checked){
-				setCookie(name,window.location,exp_days);
+				this.setCookie(name,window.location,exp_days);
 				document.body.removeChild(ck_bnr)
 			}else{
 				ck_bnr.style.display='block';
@@ -87,7 +87,8 @@ function CookieBanner() {
 			
 		el_button = document.createElement('button');
 		el_button.type="button";
-		el_button.className="btn-accept";
+		el_button.id="btn-ck-accept";
+		el_button.className="btn-ck-accept";
 		el_button.textContent="Continue";
 			
 		ck_bnr_head_cnt_2.appendChild(el_input);
@@ -98,7 +99,6 @@ function CookieBanner() {
 		// ck_bnr_head_cnt.appendChild(document.createElement('br'));
 		ck_bnr_head_cnt.appendChild(ck_bnr_head_cnt_2);
 		
-			
 		el_img = document.createElement("img");
 		el_img.src=options && options.logo || '';
 		el_img.height="40";
@@ -219,7 +219,9 @@ function CookieBanner() {
 					document.getElementById('cookie-banner-body').style.display='none';
 				}
 			},false);
+			
 			return ck_bnr;
+	
 		}
 		
 		this.render = function(){
@@ -227,25 +229,22 @@ function CookieBanner() {
 				alert('Please include the script at the end of <body> tag ');
 			}else{
 				document.body.appendChild(ck_bnr);
+				ck_acpt_btn = document.getElementById('btn-ck-accept')
+				if(ck_acpt_btn){
+					ck_acpt_btn.addEventListener('click',function (e) {
+						(new CookieBanner()).checkCookie();
+					},false);
+				}
 			}
-			el_button.addEventListener('click',function (e) {
-				checkCookie();
-			},false);
-			checkCookie();
+			this.checkCookie();
 		}
 		
 		this.destroy = function(){
 			ck_bnr = document.getElementById('cookie-banner')
 			if(ck_bnr){
-			  document.body.removeChild(ck_bnr)
+				document.body.removeChild(ck_bnr)
 			}
 		}
-		
+
 	}
-	
-
-		
-	
-
-	
 	
